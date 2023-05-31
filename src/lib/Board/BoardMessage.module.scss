@@ -1,0 +1,60 @@
+@use './../Styles/mixins';
+
+.boardMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    transform: translate3d(0, 0, 10px);
+
+    height: 100%;
+    width: 100%;
+
+    background: var(--ui-colors-board-message-bg);
+    animation: fadeIn 1s ease 1200ms;
+    animation-fill-mode: both;
+
+    border-radius: 4px;
+}
+
+.boardMessage.winner {
+    background: var(--ui-colors-board-message-victory-bg);
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: var(--ui-margin-amt);
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    height: 60px;
+    width: 30%;
+
+    background-color: var(--ui-colors-secondary);
+    border-radius: 6px;
+
+    @include mixins.playerNameFont;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.boardMessage .message {
+    @include mixins.messageFont;
+    color: var(--ui-colors-secondary);
+}

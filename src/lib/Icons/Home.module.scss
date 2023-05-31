@@ -1,0 +1,12 @@
+// Use https://codepen.io/sosuke/pen/Pjoqqp to convert rgb color to filter values.
+.homeIcon {
+  filter: invert(84%) sepia(6%) saturate(274%) hue-rotate(60deg) brightness(98%) contrast(102%);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,88 @@
+@use './../Styles/mixins';
+
+.grid {
+    display: grid;
+
+    // 8 x 2 grid
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    
+    width: 100%;
+
+    border-radius: 4px;
+}
+
+.flipped {
+    transform: rotate(180deg);
+}
+
+.col {
+    align-self: start;
+    opacity: 0;
+    background-color: var(--ui-colors-pitch-white);
+    border-radius: 4px;
+}
+
+.col.visible {
+    opacity: 1;
+    @include mixins.tileShadow;
+}
+
+.item {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.item.flipped {
+    transform: rotate(180deg);
+}
+
+.item:hover {
+    cursor: pointer;
+    box-shadow: 
+        inset 0 0 0 0.1vh rgba(0,0,0, 0.1),
+        inset 0 0 0 0.5vh var(--ui-colors-board-highlight),
+        inset 0 0 0 0.6vh rgba(0,0,0, 0.1);
+}
+
+.whiteQueen {
+    @include mixins.whiteQueen;
+}
+
+.blackQueen {
+    @include mixins.blackQueen;
+}
+
+.whiteBishop {
+    @include mixins.whiteBishop;
+}
+
+.blackBishop {
+    @include mixins.blackBishop;
+}
+
+.whiteKnight {
+    @include mixins.whiteKnight;
+}
+
+.blackKnight {
+    @include mixins.blackKnight;
+}
+
+.whiteRook {
+    @include mixins.whiteRook;
+}
+
+.blackRook {
+    @include mixins.blackRook;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

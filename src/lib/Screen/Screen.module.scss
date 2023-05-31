@@ -1,0 +1,116 @@
+@use './../Styles/mixins';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-color: var(--ui-colors-bg);
+}
+
+.container.animation {
+    pointer-events: none;
+    
+    opacity: 0;
+    filter: blur(10px);
+
+    transition: opacity 0.25s, filter 0.25s ease;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 60px;
+    width: 256px;
+
+    background-color: var(--ui-colors-secondary);
+    border-radius: var(--ui-border-radius);
+
+    text-align: center;
+    cursor: pointer;
+
+    @include mixins.playerNameFont;
+}
+
+.button:hover {
+    background-color: var(--ui-colors-accent);
+}
+
+.button:not(:last-child) {
+    margin-bottom: calc(var(--ui-margin-amt) * 2);
+}
+
+.message {
+    @include mixins.messageFont;
+}
+
+.overlayContainer {
+    position: absolute;
+    left: 0px;
+    right: 0px; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+
+    animation: fadeIn 500ms linear 1000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.overlayIsland {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: min(100vw, 480px);
+
+    padding-bottom: 24px;
+
+    background: var(--ui-colors-secondary);
+    color: var(--ui-colors-white);
+
+    border-radius: 4px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    margin-bottom: 24px;
+
+    border-bottom: 2px solid var(--ui-colors-accent);
+}
+
+.blurred {
+    filter: blur(2px);
+    transition: all 1s ease-in;
+}
+
+.container[data-theme='light'] {
+    --ui-colors-bg: #fff;
+    --ui-colors-board-dark-square: black;
+}
+  

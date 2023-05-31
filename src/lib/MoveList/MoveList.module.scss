@@ -1,0 +1,53 @@
+@use './../Styles/mixins';
+
+.container {
+
+    background-color: var(--ui-colors-secondary);
+    border: 2px solid var(--ui-colors-border);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: row;
+
+    height: 60px;
+    max-width: 400px;
+    width: 100%;
+
+    overflow: auto;
+}
+
+.move {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    background-color: var(--ui-colors-secondary);
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    @include mixins.playerNameFont;
+    font-size: 16px;
+}
+
+.move:nth-child(odd) {
+    background-color: var(--ui-colors-accent);
+}
+
+.move.current {
+    background-color: var(--ui-colors-board-dark-square);
+}
+
+.container::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+   
+.container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--ui-colors-accent);
+    outline: 1px solid black;
+}

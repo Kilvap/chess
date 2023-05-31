@@ -1,0 +1,46 @@
+// @use './../../Styles/mixins';
+
+// .container {
+//     position: absolute;
+//     left: 0px;
+//     right: 0px;
+
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     opacity: 0.5;
+
+//     height: 100vh;
+//     width: 100%;
+// }
+
+// .option {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     min-height: 60px;
+//     width: 30vw;
+
+//     background-color: var(--ui-colors-secondary);
+//     border: 2px solid black;
+//     border-radius: 4px;
+
+//     text-align: center;
+//     cursor: pointer;
+
+//     @include mixins.playerNameFont;
+
+//     transition: all .2s ease-in;
+// }
+
+// .option:hover {
+//     background-color: var(--ui-colors-primary);
+// }
+
+// .option:not(:last-child) {
+//     margin-bottom: calc(var(--ui-margin-amt) * 2);
+// }

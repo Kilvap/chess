@@ -1,0 +1,87 @@
+@use './../Styles/mixins';
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+    // using this trick to keep widths / heights to whole numbers:
+    // https://stackoverflow.com/questions/37754542/css-calc-round-down-with-two-decimal-cases/64921523#64921523
+    --shf: 4.9406564584124654e-324;
+
+    // we calculate a square size and make sure it's a whole number that's divisible by 8
+    // NOTE: we add pixels if we want gaps (7 x gap width)
+    // --square-size: calc(max(var(--ui-min-width-board-square), min(90vw, 90vh)) / 8) *  var(--shf) / var(--shf);
+
+    // TODO: use round() when available: https://developer.mozilla.org/en-US/docs/Web/CSS/round
+
+    --square-size: 32px;
+    --board-size: calc(var(--square-size) * 8);
+    height: calc(var(--board-size) /* + 7px */);
+
+    // height: 300px;
+
+    aspect-ratio: 1 / 1;
+
+    transform-style: preserve-3d;
+
+    contain: layout;
+    border-radius: var(--ui-border-radius);
+}
+
+.board.flipped {
+    transform: rotate(180deg);
+}
+
+.dragging:hover {
+    cursor: grabbing;
+}
+
+.boardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    border-radius: var(--ui-border-radius);
+}
+
+@media screen and (max-width: 400px) {
+    .board {
+        --square-size: 32px;
+        --board-size: calc(var(--square-size) * 8);
+        height: calc(var(--board-size));
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .board {
+        --square-size: 48px;
+        --board-size: calc(var(--square-size) * 8);
+        height: calc(var(--board-size));
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .board {
+        --square-size: 64px;
+        --board-size: calc(var(--square-size) * 8);
+        height: calc(var(--board-size));
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .board {
+        --square-size: 80px;
+        --board-size: calc(var(--square-size) * 8);
+        height: calc(var(--board-size));
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .board {
+        --square-size: 100px;
+        --board-size: calc(var(--square-size) * 8);
+        height: calc(var(--board-size));
+    }
+}

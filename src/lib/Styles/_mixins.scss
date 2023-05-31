@@ -1,0 +1,95 @@
+@mixin tileShadow {
+    box-shadow:  var(--ui-colors-board-shadow) 0px 5px 15px;
+}
+
+@mixin buttonShadow {
+    box-shadow:  var(--ui-colors-board-shadow) 0px 2px 10px;
+}
+
+@mixin playerNameFont {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--ui-colors-white);
+}
+
+@mixin messageFont {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    color: var(--ui-colors-white);
+    font-size: 60px;
+    font-weight: 700;
+    height: 60px;
+    line-height: 60px;
+}
+
+@mixin whiteKing {
+    background-image: url(../../../public/pieces/set1/white-king.png);
+    // background-image: url(../../../public/pieces/set2/white-king.svg);
+    background-size: 100%;
+}
+
+@mixin blackKing {
+    background-image: url(../../../public/pieces/set1/black-king.png);
+    // background-image: url(../../../public/pieces/set2/black-king.svg);
+    background-size: 100%;
+}
+
+@mixin whiteQueen {
+    background-image: url(../../../public/pieces/set1/white-queen.png);
+    // background-image: url(../../../public/pieces/set2/white-queen.svg);
+    background-size: 100%;
+}
+
+@mixin blackQueen {
+    background-image: url(../../../public/pieces/set1/black-queen.png);
+    // background-image: url(../../../public/pieces/set2/black-queen.svg);
+    background-size: 100%;
+}
+
+@mixin whiteBishop {
+    background-image: url(../../../public/pieces/set1/white-bishop.png);
+    // background-image: url(../../../public/pieces/set2/white-bishop.svg);
+    background-size: 100%;
+}
+
+@mixin blackBishop {
+    background-image: url(../../../public/pieces/set1/black-bishop.png);
+    // background-image: url(../../../public/pieces/set2/black-bishop.svg);
+    background-size: 100%;
+}
+
+@mixin whiteKnight {
+    background-image: url(../../../public/pieces/set1/white-knight.png);
+    // background-image: url(../../../public/pieces/set2/white-knight.svg);
+    background-size: 100%;
+}
+
+@mixin blackKnight {
+    background-image: url(../../../public/pieces/set1/black-knight.png);
+    // background-image: url(../../../public/pieces/set2/black-knight.svg);
+    background-size: 100%;
+}
+
+@mixin whiteRook {
+    background-image: url(../../../public/pieces/set1/white-rook.png);
+    // background-image: url(../../../public/pieces/set2/white-rook.svg);
+    background-size: 100%;
+}
+
+@mixin blackRook {
+    background-image: url(../../../public/pieces/set1/black-rook.png);
+    // background-image: url(../../../public/pieces/set2/black-rook.svg);
+    background-size: 100%;
+}
+
+@mixin whitePawn {
+    background-image: url(../../../public/pieces/set1/white-pawn.png);
+    // background-image: url(../../../public/pieces/set2/white-pawn.svg);
+    background-size: 100%;
+}
+
+@mixin blackPawn {
+    background-image: url(../../../public/pieces/set1/black-pawn.png);
+    // background-image: url(../../../public/pieces/set2/black-pawn.svg);
+    background-size: 100%;
+}

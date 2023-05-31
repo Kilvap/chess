@@ -1,0 +1,29 @@
+@use './../Styles/mixins';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 60px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--ui-border-radius);
+    color: var(--ui-colors-white);
+
+    width: 60px;
+}
+
+.button:hover {
+    cursor: pointer;
+    
+    color: var(--ui-colors-primary);
+    background-color: var(--ui-colors-accent);
+}
+
