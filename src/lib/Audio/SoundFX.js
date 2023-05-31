@@ -2,7 +2,7 @@
 export default class SoundFX {
     
     constructor() {
-        this.player = new Audio("/sounds/soundfx.mp3");
+        this.player = new Audio("/chess/sounds/soundfx.mp3");
         // this.player.oncanplaythrough = function() {
         // }.bind(this);
     }
