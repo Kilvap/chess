@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chess/static/css/main.1745713d.css",
-    "main.js": "/chess/static/js/main.8252acb2.js",
+    "main.js": "/chess/static/js/main.a73b9df9.js",
     "static/js/787.497f1025.chunk.js": "/chess/static/js/787.497f1025.chunk.js",
     "static/media/ClearSans-Regular.woff": "/chess/static/media/ClearSans-Regular.e91449d6d8a171d9ea1d.woff",
     "static/media/white-queen.png": "/chess/static/media/white-queen.b76c485974258a5f22ac.png",
@@ -16,11 +16,11 @@
     "static/media/black-bishop.png": "/chess/static/media/black-bishop.30738202aba01e19da85.png",
     "index.html": "/chess/index.html",
     "main.1745713d.css.map": "/chess/static/css/main.1745713d.css.map",
-    "main.8252acb2.js.map": "/chess/static/js/main.8252acb2.js.map",
+    "main.a73b9df9.js.map": "/chess/static/js/main.a73b9df9.js.map",
     "787.497f1025.chunk.js.map": "/chess/static/js/787.497f1025.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1745713d.css",
-    "static/js/main.8252acb2.js"
+    "static/js/main.a73b9df9.js"
   ]
 }
