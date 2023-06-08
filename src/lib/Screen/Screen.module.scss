@@ -41,9 +41,9 @@
     background-color: var(--ui-colors-accent);
 }
 
-.button:not(:last-child) {
-    margin-bottom: calc(var(--ui-margin-amt) * 2);
-}
+// .button:not(:last-child) {
+//     margin-bottom: calc(var(--ui-margin-amt) * 2);
+// }
 
 .message {
     @include mixins.messageFont;
