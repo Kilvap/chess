@@ -1,6 +1,6 @@
 # Demo
 
-[Play Chess]: https://kilvap.github.io/chess
+[Play Chess](https://kilvap.github.io/chess)
 
 # Setup
 
