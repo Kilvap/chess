@@ -72,7 +72,7 @@
 
 @media screen and (min-width: 1200px) {
     .board {
-        --square-size: 80px;
+        --square-size: 76px;
         --board-size: calc(var(--square-size) * 8);
         height: calc(var(--board-size));
     }
@@ -80,7 +80,7 @@
 
 @media screen and (min-width: 1600px) {
     .board {
-        --square-size: 100px;
+        --square-size: 96px;
         --board-size: calc(var(--square-size) * 8);
         height: calc(var(--board-size));
     }
