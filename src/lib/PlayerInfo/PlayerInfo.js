@@ -8,8 +8,8 @@ import constants from "../Helpers/Constants";
 import styles from './PlayerInfo.module.scss';
 
 const sideImg = {
-    [constants.BLACK]: "/chess/pieces/set1/black-pawn.png",
-    [constants.WHITE]: "/chess/pieces/set1/white-pawn.png",
+    [constants.BLACK]: "/chess/pieces/set2/black-pawn.svg",
+    [constants.WHITE]: "/chess/pieces/set2/white-pawn.svg",
 };
 
 function getMinutesString(time) {
