@@ -50,8 +50,8 @@ export default function Game() {
     }, [game, agents, gameLogic, updateGame, updateUI]);
 
     useEffect(() => {
-        if (game.status.state == STATE_COMPLETED) {
-            setScreenState(OverlayScreenAction(GameOverScreenAction({ result: game.status.result })));
+        if (game.status.state === STATE_COMPLETED) {
+            setScreenState(OverlayScreenAction(GameOverScreenAction({ game })));
         }
     }, [game, setScreenState])
 

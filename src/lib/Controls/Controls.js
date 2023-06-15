@@ -1,11 +1,33 @@
 
 import { FlipBoardAction } from '../UI/UIActions';
+import { useScreenContext } from '../Context/ScreenContext';
+import { useGameContext } from '../Context/Game/GameContext';
+
+import { ScreenTransitionAction, HomeScreenAction } from '../Screen/ScreenActions';
+import { ReplayGameAction } from '../Context/Game/GameContextActions';
+
+
 import HomeIcon from '../Icons/Home';
 import SwapVerticalIcon from '../Icons/SwapVertical';
-import styles from './Controls.module.scss';
-import { useScreenContext } from '../Context/ScreenContext';
-import { ScreenTransitionAction, HomeScreenAction } from '../Screen/ScreenActions';
+import ForfeitIcon from '../Icons/Forfeit';
 
+import styles from './Controls.module.scss';
+
+
+function ForfeitButton() {
+
+    let { setGameContext } = useGameContext();
+
+    let handleClick = () => {
+        setGameContext(ReplayGameAction());
+    }
+
+    return (
+        <div className={styles.button} onClick={handleClick}>
+            <ForfeitIcon/>
+        </div>
+    )
+}
 
 function SwapBoardButton(props) {
     let { updateUI } = props;
@@ -40,8 +62,9 @@ export default function Controls(props) {
 
     return (
         <div className={styles.container}>
-            <HomeButton />
+            <ForfeitButton />
             <SwapBoardButton updateUI={props.updateUI} />
+            <HomeButton />
         </div>
     )
 }

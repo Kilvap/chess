@@ -49,6 +49,10 @@
     @include mixins.messageFont;
 }
 
+.subMessage {
+    @include mixins.subMessageFont;
+}
+
 .overlayContainer {
     position: absolute;
     left: 0px;

@@ -1,6 +1,6 @@
-export const GAMEWON = "Won";
-export const GAMELOST = "Lost";
-export const GAMESTALEMATE = "Stalemate";
+// export const GAMEWON = "Won";
+// export const GAMELOST = "Lost";
+// export const GAMESTALEMATE = "Stalemate";
 
 // Game status state
 export const STATE_ACTIVE = "Active";

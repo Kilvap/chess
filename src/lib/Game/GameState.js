@@ -193,15 +193,3 @@ export function buildInitialGameState(playerSide) {
         status: initialGameStatus(),
     };
 }
-
-// const state = {
-//     // static stuff that doesn't change
-//     meta: initialMetaState,
-
-//     // game state stuff
-//     board: initialBoard,
-//     pieces: initialPieces,
-//     turn: getPlayerIndexWithWhitePieces(),
-//     moves: [], // list of PerformedMoves
-//     status: initialGameStatus(),
-// };

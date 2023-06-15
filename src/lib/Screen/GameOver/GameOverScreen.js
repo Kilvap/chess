@@ -4,7 +4,7 @@ import { useScreenContext } from '../../Context/ScreenContext';
 import { ReplayGameAction } from '../../Context/Game/GameContextActions';
 
 import styles from './../Screen.module.scss';
-import { GAMEWON, GAMELOST, GAMESTALEMATE } from '../../Helpers/GameStatus';
+import { CHECKMATE, TIME, STALEMATE } from '../../Helpers/GameStatus';
 
 function PlayAgain(setGameContext, setScreenState) {
     return () => {
@@ -19,41 +19,55 @@ function ShowBoard(setScreenState) {
     }
 }
 
-function VictoryMessage() {
+function ResultSubHeading(gameResult) {
+
+    if (gameResult.type === CHECKMATE) {
+        return <div className={styles.subMessage}> Checkmate </div>;
+    }
+
+    if (gameResult.type === TIME) {
+        return <div className={styles.subMessage}> Time </div>;
+    }
+
+    return null;
+}
+
+function VictoryHeading(result) {
     return (
-        <div className={styles.message}> Victory! </div>
+        <div className={styles.heading}>
+            <div className={styles.message}> Victory! </div>
+            <ResultSubHeading {...result} />
+        </div>
     )
 }
 
-function DefeatMessage() {
+function DefeatHeading(result) {
     return (
-        <div className={styles.message}> Defeat </div>
+        <div className={styles.heading}>
+            <div className={styles.message}> Defeat </div>
+            <ResultSubHeading {...result} />
+        </div>
     )
 }
 
-function StalemateMessage() {
+function StalemateHeading() {
     return (
-        <div className={styles.message}> Stalemate </div>
+        <div className={styles.heading}>
+            <div className={styles.message}> Stalemate </div>
+        </div>
     )
 }
 
-function GameOverMessage() {
-    return (
-        <div className={styles.message}> Game Over </div>
-    )
-}
+function Heading(state) {
 
-function Message(props) {
+    let { game: { status: { result: gameResult } } } = state;
 
-    switch(props.result) {
-        case GAMEWON:
-            return <VictoryMessage />;
-        case GAMELOST:
-            return <DefeatMessage />;
-        case GAMESTALEMATE:
-            return <StalemateMessage />;
-        default:
-            return <GameOverMessage />;
+    if (gameResult.winner === state.game.meta.userIndex) {
+        return <VictoryHeading {...gameResult} />
+    } else if (gameResult.winner === null && gameResult.type === STALEMATE) {
+        return <StalemateHeading {...gameResult} />
+    } else {
+        return <DefeatHeading {...gameResult} />
     }
 }
 
@@ -67,9 +81,7 @@ export default function GameOverScreen(props) {
 
             <div className={styles.overlayIsland}>
 
-                <div className={styles.heading}>
-                    <Message {...props} />
-                </div>
+                <Heading {...props} />
 
                 <div className={styles.button} onClick={ PlayAgain(setGameContext, setScreenState) }>
                     Play again
