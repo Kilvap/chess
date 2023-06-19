@@ -1,10 +1,11 @@
+// https://fonts.google.com/icons?selected=Material+Symbols+Outlined:home:FILL@1;wght@400;GRAD@0;opsz@40&icon.set=Material+Symbols&icon.query=flag
 
 import styles from './Forfeit.module.scss';
 
 export default function ForfeitIcon() {
     return (
         <div className={styles.forfeitIcon}>
-            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M172-92v-736.667h400l18.355 84.001h238.312v436.665h-316l-18-83.333H276.666V-92H172Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M200-120v-680h348.666l18 84H800v380H536l-18-83.334H266.666V-120H200Z"/></svg>
         </div>
     )
 }

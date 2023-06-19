@@ -30,7 +30,7 @@ export function reducer(state, action) {
 export function buildPlayerVSComputerGameContext() {
 
     let gameLogic = new GameLogic();
-    let engine = new Worker('stockfish11.min.js');
+    let engine = new Worker(process.env.PUBLIC_URL + "/stockfish11.min.js");
     let agents = [new UIPlayer(), new BotPlayer(gameLogic, engine)];
     let side = constants.WHITE;
 
@@ -55,7 +55,7 @@ export function buildPlayerVSFriendGameContext() {
 export function buildComputerVsComputerGameContext() {
 
     let gameLogic = new GameLogic();
-    let engine = new Worker('stockfish11.min.js');
+    let engine = new Worker(process.env.PUBLIC_URL + "/stockfish11.min.js");
     let agents = [new BotPlayer(gameLogic, engine), new BotPlayer(gameLogic, engine)];
     let initialGameState = buildInitialGameState(constants.WHITE);
 

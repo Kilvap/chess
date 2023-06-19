@@ -5,7 +5,7 @@ import styles from './Home.module.scss';
 export default function HomeIcon() {
     return (
         <div className={styles.homeIcon}>
-            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M132-92v-522.111l348-261.555 348.667 261.222V-92h-262v-314.667H393.333V-92H132Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z"/></svg>
         </div>
     )
 }
