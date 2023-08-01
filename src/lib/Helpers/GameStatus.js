@@ -1,13 +1,10 @@
-// export const GAMEWON = "Won";
-// export const GAMELOST = "Lost";
-// export const GAMESTALEMATE = "Stalemate";
-
 // Game status state
+export const STATE_PREGAME = "Pregame";
 export const STATE_ACTIVE = "Active";
 export const STATE_COMPLETED = "Completed";
 
 export function initialGameStatus() {
-    return { state: STATE_ACTIVE, checked: false, movesAvailable: true, result: null };
+    return { state: STATE_PREGAME, checked: false, movesAvailable: true, result: null };
 }
 
 // Game result types
@@ -41,58 +38,7 @@ export function buildTimeRunOutGameStatus(oldStatus, playerIndex) {
     return { state: STATE_COMPLETED, movesAvailable: oldStatus.movesAvailable, checked: oldStatus.checked, result: gameResult(opponent(playerIndex), TIME)};
 }
 
-// export default class GameStatus {
-
-//     static gameWon(status, playerIndex, turn) {
-//         return (status.movesAvailable === false && status.checked === true && turn !== playerIndex);
-//     }
-
-//     static gameLost(status, playerIndex, turn) {
-//         return (status.movesAvailable === false && status.checked === true && turn === playerIndex);
-//     }
-
-//     static staleMate(status) {
-//         return (status.movesAvailable === false && status.checked === false);
-//     }
-
-//     static gameActive(status) {
-//         return status.movesAvailable === true;
-//     }
-
-//     static gameOver(status) {
-//         return status.movesAvailable === false;
-//     }
-
-//     static gameResult(status, userIndex, turn) {
-
-//         if (GameStatus.gameWon(status, userIndex, turn)) {
-//             return GAMEWON;
-//         }
-
-//         if (GameStatus.gameLost(status, userIndex, turn)) {
-//             return GAMELOST;
-//         }
- 
-//         if (GameStatus.staleMate(status)) {
-//             return GAMESTALEMATE;
-//         }
-//     }
-
-//     static gameResult2(winner, type) {
-//         return { winner, type };
-//     }
-
-//     static initialGameStatus() {
-//         return { state: STATE_ACTIVE, checked: false, movesAvailable: true, result: null };
-//     }
-
-//     static nextGameStatus(checked, movesAvailable, playerIndex, turn) {
-
-//         let status = GameStatus.initialGameStatus();
-        
-//         status.checked = checked;
-//         status.movesAvailable = movesAvailable;
-
-//         return status;
-//     }
-// }
+// called after the first move of the game
+export function buildActiveGameStatus() {
+    return { state: STATE_ACTIVE, checked: false, movesAvailable: true, result: null };
+}

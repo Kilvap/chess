@@ -68,7 +68,7 @@ function WinnerBadge() {
 function getClockClassnames(props) {
     let classes = [styles.playerClock];
 
-    if (props.turn === props.playerIndex && props.status.state === STATE_ACTIVE) {
+    if (props.turn === props.playerIndex && props.status.state !== STATE_COMPLETED) {
         classes.push(styles.turn);
     }
 

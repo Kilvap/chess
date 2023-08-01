@@ -22,7 +22,7 @@ function getBoardClassName(props) {
 }
 
 function move(props, source, destination, animate) {
-            
+
     let validMoves = props.gameLogic.getValidMoves(props.board, props.pieces, source);
 
     for (var i = 0; i < validMoves.length; i++) {

@@ -7,7 +7,7 @@ import Layout from '../Layout/Layout.js';
 import Board from '../Board/Board.js';
 // import EvaluationBar from '../EvaluationBar/EvaluationBar.js';
 
-import { STATE_ACTIVE, STATE_COMPLETED } from '../Helpers/GameStatus.js';
+import { STATE_COMPLETED } from '../Helpers/GameStatus.js';
 import createUIReducer from '../UI/UIReducer.js';
 import buildUIState from '../UI/UIState';
 import { AnimateMove } from '../UI/UIActions';
@@ -19,7 +19,7 @@ import { GameOverScreenAction, OverlayScreenAction } from '../Screen/ScreenActio
 // valid move. Runs until the game is over.
 async function moveLoop(game, agents, gameLogic, updateGame, updateUI) {
     
-    if (game.status.state !== STATE_ACTIVE) {
+    if (game.status.state === STATE_COMPLETED) {
         return;
     }
 

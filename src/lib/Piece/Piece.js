@@ -2,6 +2,7 @@ import styles from './Piece.module.scss';
 import { useEffect, useRef } from 'react';
 import constants from '../Helpers/Constants';
 import { EndMoveAnimation, SelectAction } from '../UI/UIActions';
+import { STATE_COMPLETED } from '../Helpers/GameStatus';
 
 const pieceClasses = {
     [constants.BLACK]: 
@@ -89,6 +90,11 @@ function DragPiece(props) {
 
 function PickUpPiece(props, drag, drop) {
     return (e) => {
+
+        // don't allow picking up pieces once game is complete
+        if (props.status.state === STATE_COMPLETED) {
+            return;
+        }
 
         // don't allow picking up opponents pieces
         let boardPiece = props.pieces[props.pieceId];
