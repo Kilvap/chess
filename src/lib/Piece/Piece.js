@@ -206,6 +206,6 @@ export default function Piece(props) {
     }, [props]);
 
     return (
-        <div ref={pieceRef} className={style} onMouseDown={pickupPiece} /*onTouchStart={pickupPiece}*/ draggable={true} />
+        <div ref={pieceRef} className={style} onMouseDown={pickupPiece} />
     );
 }
