@@ -1,8 +1,7 @@
-
 import commonStyles from './../Screen.module.scss';
 import styles from './HomeScreen.module.scss';
 
-import { ScreenTransitionAction, GameTypeScreenAction, GameScreenAction } from '../ScreenActions';
+import { ScreenTransitionAction, GameScreenAction } from '../ScreenActions';
 
 import { useGameContext } from '../../Context/Game/GameContext';
 import { useScreenContext } from '../../Context/ScreenContext';

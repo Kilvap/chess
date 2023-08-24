@@ -1,4 +1,4 @@
-import { ScreenTransitionAction, GameScreenAction, HomeScreenAction } from '../ScreenActions';
+import { GameScreenAction } from '../ScreenActions';
 import { useGameContext } from '../../Context/Game/GameContext';
 import { useScreenContext } from '../../Context/ScreenContext';
 import { ReplayGameAction } from '../../Context/Game/GameContextActions';
@@ -89,10 +89,6 @@ export default function GameOverScreen(props) {
 
                 <div className={styles.button} onClick={ ShowBoard(setScreenState) }>
                     Show board
-                </div>
-
-                <div className={styles.button} onClick={ () => {setScreenState(ScreenTransitionAction(HomeScreenAction()))} }>
-                    Go home
                 </div>
             </div>
         </div>

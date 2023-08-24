@@ -1,11 +1,10 @@
 .container {
     display: grid;
     grid-template-areas:
-        ". board board . ."
-        ". board board playerTop ."
-        ". board board playerBottom ."
-        ". board board controls ."
-        ". board board . .";
+        ". playerTop ."
+        ". board ."
+        ". playerBottom ."
+        ". controls .";
 
     
 
@@ -15,11 +14,10 @@
 
 .container.flipped {
     grid-template-areas:
-        ". board board . ."
-        ". board board playerBottom ."
-        ". board board playerTop ."
-        ". board board controls ."
-        ". board board . .";
+        ". playerBottom ."
+        ". board ."
+        ". playerTop ."
+        ". controls .";
 }
 
 .header {
@@ -109,19 +107,20 @@
 
     .container {
         grid-template-areas:
-            ". board board . ."
-            ". board board playerTop ."
-            ". board board playerBottom ."
-            ". board board controls ."
-            ". board board . .";
+            ". . board . ."
+            ". . board playerTop ."
+            ". . board playerBottom ."
+            ". . board controls ."
+            ". . board . .";
+            
     }
 
     .container.flipped {
         grid-template-areas:
-            ". board board . ."
-            ". board board playerBottom ."
-            ". board board playerTop ."
-            ". board board controls ."
-            ". board board . .";
+            ". . board . ."
+            ". . board playerBottom ."
+            ". . board playerTop ."
+            ". . board controls ."
+            ". . board . .";
     }
 }

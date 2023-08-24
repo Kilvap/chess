@@ -1,13 +1,14 @@
-import HomeScreen from "./Home/HomeScreen";
+//import HomeScreen from "./Home/HomeScreen";
 import GameScreen from "./Game/GameScreen";
-import GameTypeScreen from './GameType/GameTypeScreen';
+//import GameTypeScreen from './GameType/GameTypeScreen';
 
-import { HOME, GAME, GAMETYPE, GAMEOVER } from './ScreenActions';
+import { GAMEOVER } from './ScreenActions';
 import { GameContextProvider } from "../Context/Game/GameContext";
 
 import styles from './Screen.module.scss';
 import { useScreenContext } from "../Context/ScreenContext";
 import GameOverScreen from "./GameOver/GameOverScreen";
+import Shell from "../Shell/Shell";
 
 function getCurrentOverlay(state) {
 
@@ -24,25 +25,25 @@ function getCurrentOverlay(state) {
     }
 }
 
-function getCurrentScreen(state) {
+// function getCurrentScreen(state) {
 
-    switch(state.type) {
-        case HOME:
-            return <HomeScreen />;
-        case GAMETYPE:
-            return <GameTypeScreen />;
-        case GAME:
-            return <GameScreen />;
-        default:
-            return <HomeScreen />;
-    }
-}
+//     switch(state.type) {
+//         case HOME:
+//             return <HomeScreen />;
+//         case GAMETYPE:
+//             return <GameTypeScreen />;
+//         case GAME:
+//             return <GameScreen />;
+//         default:
+//             return <GameScreen />;
+//     }
+// }
 
 function getScreens(state) {
-    let screen = getCurrentScreen(state);
+    //let screen = getCurrentScreen(state);
     let overlay = getCurrentOverlay(state);
 
-    return [screen, overlay];
+    return [/*screen, */overlay];
 }
 
 function handleTransitionEnd(state, setState) {
@@ -82,21 +83,29 @@ function getMainScreenClasses(state) {
     return classes.join(" ");
 }
 
+let navLinks = {
+    home: "https://kilvap.github.io",
+    info: "https://en.wikipedia.org/wiki/Chess",
+    github: "https://github.com/Kilvap/chess"
+};
+
 // Handles transitions between screens by exhausting nextScreen
 export default function Screen() {
 
     let { screenState, setScreenState } = useScreenContext();
-    let [screen, overlay] = getScreens(screenState);
+    let [/*screen,*/ overlay] = getScreens(screenState);
 
     return (
-        <GameContextProvider>
-            <div className={getClasses(screenState)} onTransitionEnd={handleTransitionEnd(screenState, setScreenState)}>
-                <div className={getMainScreenClasses(screenState)}>
-                    { screen }
-                </div>    
-                
-                { overlay }
-            </div>
-        </GameContextProvider>
+        <Shell navLinks={navLinks}>
+            <GameContextProvider>
+                <div className={getClasses(screenState)} onTransitionEnd={handleTransitionEnd(screenState, setScreenState)}>
+                    <div className={getMainScreenClasses(screenState)}>
+                        <GameScreen /> {/* For now only show the game screen */ }
+                    </div>    
+                    
+                    { overlay }
+                </div>
+            </GameContextProvider>
+        </Shell>
     )
 }

@@ -10,16 +10,16 @@ export function reducer(state, action) {
     switch(action.type) {
         case NEW_COMPUTER_GAME:
             var newGame = buildPlayerVSComputerGameContext();
-            var newGameId = state.gameId + 1
+            var newGameId = state.gameId + 1;
             return {...state, ...newGame, gameId: newGameId };
 
         case NEW_FRIEND_GAME:
-            var newGame = buildPlayerVSFriendGameContext();
-            var newGameId = state.gameId + 1
+            newGame = buildPlayerVSFriendGameContext();
+            newGameId = state.gameId + 1;
             return {...state, ...newGame, gameId: newGameId };
 
         case REPLAY_GAME:
-            var newGameId = state.gameId + 1
+            newGameId = state.gameId + 1;
             return {...state, gameId: newGameId };
 
         default:

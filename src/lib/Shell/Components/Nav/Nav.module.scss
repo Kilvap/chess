@@ -1,0 +1,31 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: var(--ui-colors-black);
+}
+
+.navIsland {
+    display: flex;
+    flex-direction: row;
+}
+
+.navButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+}
+
+.navButton:hover {
+    background-color: var(--ui-colors-accent);
+}
+

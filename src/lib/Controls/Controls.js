@@ -43,20 +43,20 @@ function SwapBoardButton(props) {
     )
 }
 
-function HomeButton() {
+// function HomeButton() {
 
-    let { setScreenState } = useScreenContext();
+//     let { setScreenState } = useScreenContext();
 
-    let handleClick = () => {
-        setScreenState(ScreenTransitionAction(HomeScreenAction()));
-    }
+//     let handleClick = () => {
+//         setScreenState(ScreenTransitionAction(HomeScreenAction()));
+//     }
 
-    return (
-        <div className={styles.button} onClick={handleClick}>
-            <HomeIcon/>
-        </div>
-    )
-}
+//     return (
+//         <div className={styles.button} onClick={handleClick}>
+//             <HomeIcon/>
+//         </div>
+//     )
+// }
 
 export default function Controls(props) {
 
@@ -64,7 +64,6 @@ export default function Controls(props) {
         <div className={styles.container}>
             <ForfeitButton />
             <SwapBoardButton updateUI={props.updateUI} />
-            <HomeButton />
         </div>
     )
 }
