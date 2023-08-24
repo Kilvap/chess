@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chess/static/css/main.fb5e31fa.css",
-    "main.js": "/chess/static/js/main.9c7805d6.js",
+    "main.css": "/chess/static/css/main.71ae10ca.css",
+    "main.js": "/chess/static/js/main.4cf72f8d.js",
     "static/js/787.497f1025.chunk.js": "/chess/static/js/787.497f1025.chunk.js",
     "static/media/ClearSans-Regular.woff": "/chess/static/media/ClearSans-Regular.e91449d6d8a171d9ea1d.woff",
     "static/media/black-queen.svg": "/chess/static/media/black-queen.bf60c452b95b8deefa60.svg",
@@ -17,12 +17,12 @@
     "static/media/white-rook.svg": "/chess/static/media/white-rook.306b5be2f00a33c7f071.svg",
     "static/media/black-pawn.svg": "/chess/static/media/black-pawn.f09e710efe4061175b76.svg",
     "index.html": "/chess/index.html",
-    "main.fb5e31fa.css.map": "/chess/static/css/main.fb5e31fa.css.map",
-    "main.9c7805d6.js.map": "/chess/static/js/main.9c7805d6.js.map",
+    "main.71ae10ca.css.map": "/chess/static/css/main.71ae10ca.css.map",
+    "main.4cf72f8d.js.map": "/chess/static/js/main.4cf72f8d.js.map",
     "787.497f1025.chunk.js.map": "/chess/static/js/787.497f1025.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb5e31fa.css",
-    "static/js/main.9c7805d6.js"
+    "static/css/main.71ae10ca.css",
+    "static/js/main.4cf72f8d.js"
   ]
 }
