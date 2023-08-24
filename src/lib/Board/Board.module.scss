@@ -64,13 +64,13 @@
 
 @media screen and (min-width: 1080px) {
     .board {
-        --square-size: 64px;
+        --square-size: 48px;
         --board-size: calc(var(--square-size) * 8);
         height: calc(var(--board-size));
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .board {
         --square-size: 64px;
         --board-size: calc(var(--square-size) * 8);
@@ -80,7 +80,7 @@
 
 @media screen and (min-width: 1600px) {
     .board {
-        --square-size: 80px;
+        --square-size: 86px;
         --board-size: calc(var(--square-size) * 8);
         height: calc(var(--board-size));
     }
