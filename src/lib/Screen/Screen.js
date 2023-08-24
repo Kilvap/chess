@@ -74,7 +74,7 @@ function getClasses(state) {
 
 function getMainScreenClasses(state) {
 
-    let classes = [];
+    let classes = [styles.mainArea];
 
     if (!!state.overlay) {
         classes.push(styles.blurred);

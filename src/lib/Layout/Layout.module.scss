@@ -1,12 +1,10 @@
 .container {
     display: grid;
     grid-template-areas:
-        ". playerTop ."
-        ". board ."
-        ". playerBottom ."
-        ". controls .";
-
-    
+        "playerTop"
+        "board"
+        "playerBottom"
+        "controls";
 
     column-gap: var(--ui-margin-amt);
     row-gap: var(--ui-margin-amt);
@@ -14,10 +12,10 @@
 
 .container.flipped {
     grid-template-areas:
-        ". playerBottom ."
-        ". board ."
-        ". playerTop ."
-        ". controls .";
+        "playerBottom"
+        "board"
+        "playerTop"
+        "controls";
 }
 
 .header {
@@ -64,63 +62,43 @@
     flex-direction: column;
 }
 
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1280px) {
 
     .container {
         grid-template-areas:
-            ". playerTop ."
-            ". board ."
-            ". playerBottom ."
-            ". controls .";
+            "playerTop"
+            "board"
+            "playerBottom"
+            "controls";
     }
 
     .container.flipped {
         grid-template-areas:
-            ". playerBottom ."
-            ". board ."
-            ". playerTop ."
-            ". controls .";
-    }
-
-}
-  
-@media (orientation: portrait) {
-    .container {
-        grid-template-areas:
-            ". playerTop ."
-            ". board ."
-            ". playerBottom ."
-            ". controls .";
-    }
-
-    .container.flipped {
-        grid-template-areas:
-            ". playerBottom ."
-            ". board ."
-            ". playerTop ."
-            ". controls .";
+            "playerBottom"
+            "board"
+            "playerTop"
+            "controls";
     }
 }
 
-@media (orientation: landscape) {
-
+@media screen and (min-width: 1280px) {
     .container {
         grid-template-areas:
-            ". . board . ."
-            ". . board playerTop ."
-            ". . board playerBottom ."
-            ". . board controls ."
-            ". . board . .";
+            "board ."
+            "board playerTop"
+            "board playerBottom"
+            "board controls"
+            "board .";
             
     }
 
     .container.flipped {
         grid-template-areas:
-            ". . board . ."
-            ". . board playerBottom ."
-            ". . board playerTop ."
-            ". . board controls ."
-            ". . board . .";
+            "board ."
+            "board playerBottom"
+            "board playerTop"
+            "board controls"
+            "board .";
     }
 }
+
