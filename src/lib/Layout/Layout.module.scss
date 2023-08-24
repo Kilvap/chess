@@ -34,16 +34,16 @@
     grid-area: playerTop;
 
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .playerBottom {
     grid-area: playerBottom;
 
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .moveList {

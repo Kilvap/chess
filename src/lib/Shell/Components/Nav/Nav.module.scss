@@ -1,20 +1,41 @@
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-    position: fixed;
-    bottom: 0;
-    left: 0;
+@media (orientation: landscape) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-    width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
 
-    background-color: var(--ui-colors-secondary);
+        background-color: var(--ui-colors-secondary);
+    }
+
+    .navIsland {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.navIsland {
-    display: flex;
-    flex-direction: row;
+@media (orientation: portrait) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    
+        background-color: var(--ui-colors-secondary);
+    }
+
+    .navIsland {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .navButton {

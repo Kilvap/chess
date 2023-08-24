@@ -7,19 +7,17 @@ import styles from './Nav.module.scss';
 export default function Nav(props) {
     return (
         <div className={styles.nav}>
-            <div className={styles.navRow}>
-                <div className={styles.navIsland}>
-                    <div className={styles.navButton}>
-                        <HomeIcon link={props.links["home"]} />
-                    </div>
+            <div className={styles.navIsland}>
+                <div className={styles.navButton}>
+                    <HomeIcon link={props.links["home"]} />
+                </div>
 
-                    <div className={styles.navButton}>
-                        <InfoIcon link={props.links["info"]} />
-                    </div>
+                <div className={styles.navButton}>
+                    <InfoIcon link={props.links["info"]} />
+                </div>
 
-                    <div className={styles.navButton}>
-                        <GithubIcon link={props.links["github"]} />
-                    </div>
+                <div className={styles.navButton}>
+                    <GithubIcon link={props.links["github"]} />
                 </div>
             </div>
         </div>
