@@ -8,17 +8,9 @@ export default function Nav(props) {
     return (
         <div className={styles.nav}>
             <div className={styles.navIsland}>
-                <div className={styles.navButton}>
-                    <HomeIcon link={props.links["home"]} />
-                </div>
-
-                <div className={styles.navButton}>
-                    <InfoIcon link={props.links["info"]} />
-                </div>
-
-                <div className={styles.navButton}>
-                    <GithubIcon link={props.links["github"]} />
-                </div>
+                <HomeIcon className={styles.navButton} link={props.links["home"]} />
+                <InfoIcon className={styles.navButton} link={props.links["info"]} />
+                <GithubIcon className={styles.navButton} link={props.links["github"]} />
             </div>
         </div>
     )
