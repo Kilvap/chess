@@ -3,6 +3,11 @@ import Constants from "./Constants";
 export default class PieceSelector {
 
     static getPiece(board, pieces, coordinates) {
+
+        if (coordinates === null) {
+            return null;
+        }
+
         let pieceId = board[coordinates[0]][coordinates[1]];
         if (pieceId === null) {
             return null;

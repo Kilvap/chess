@@ -55,12 +55,6 @@ export default function Game() {
         }
     }, [game, setScreenState])
 
-    // Set the room id
-    // useEffect(() => {
-    //     window.history.replaceState( null, null, "?room=asdf" );
-    //     return () => { window.history.replaceState(null, null, null) };
-    // }, []);
-
     return (
         <Layout game={game} ui={ui} updateGameState={updateGame} updateUI={updateUI}>
 

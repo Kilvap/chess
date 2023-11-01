@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import constants from '../Helpers/Constants';
 import { EndMoveAnimation, SelectAction } from '../UI/UIActions';
 import { STATE_COMPLETED } from '../Helpers/GameStatus';
+import UIPlayer from '../Players/UIPlayer';
 
 const pieceClasses = {
     [constants.BLACK]: 
@@ -99,6 +100,11 @@ function PickUpPiece(props, drag, drop) {
         // don't allow picking up opponents pieces
         let boardPiece = props.pieces[props.pieceId];
         if (boardPiece.owner !== props.turn) {
+            return;
+        }
+
+        // don't allow picking up pieces if we are not the UIPlayer type
+        if (!(props.players[boardPiece.owner] instanceof UIPlayer)) {
             return;
         }
 
